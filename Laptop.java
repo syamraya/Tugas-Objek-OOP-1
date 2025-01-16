@@ -7,7 +7,7 @@ public class Laptop {
         "3. HP Spectre x360",
         "4. Lenovo ThinkPad X1 Carbon",
         "5. Asus ZenBook 13"
-    };
+};
     
     String[] specs = {
         "Dell XPS 13: Laptop warna light blue, Intel Core i7, 16GB RAM, 512GB SSD",
@@ -15,22 +15,35 @@ public class Laptop {
         "HP Spectre x360: Laptop warna black asteroid, Intel Core i7, 16GB RAM, 1TB SSD",
         "Lenovo ThinkPad X1 Carbon: Laptop warna black carbon, Intel Core i7, 16GB RAM, 1TB SSD",
         "Asus ZenBook 13: Laptop warna silver light, Intel Core i5, 8GB RAM, 256GB SSD"
-    };
+};
     void tampilSpeklaptop(){
         System.out.println("Pilih nomor untuk menampilkan spek laptop yang dipilih:");
-        for (String laptop : laptops) {
-            System.out.println(laptop);
-        }
 
         Scanner scanner = new Scanner(System.in);
+
         int choice = scanner.nextInt();
-         if (choice > 0 && choice <= specs.length) {
+        switch ( choice) {
+            case 1 :
             System.out.println("Spesifikasi: ");
             System.out.println(specs[choice - 1]);
-        } else {
+            case 2 :
+            System.out.println("Spesifikasi: ");
+            System.out.println(specs[choice - 1]);
+            case 3 :
+            System.out.println("Spesifikasi: ");
+            System.out.println(specs[choice - 1]);
+            case 4 :
+            System.out.println("Spesifikasi: ");
+            System.out.println(specs[choice - 1]);
+            case 5 :
+            System.out.println("Spesifikasi: ");
+            System.out.println(specs[choice - 1]);
+                break;
+            default:
             System.out.println("Pilihan tidak valid.");
-        }
+        break;
         
-        scanner.close();
-    }
+     }
+    scanner.close();
+   }
 }
